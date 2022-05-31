@@ -1,0 +1,64 @@
+@inherits LayoutComponentBase
+@page "/about"
+
+<div class="page_bg" style="background: url(Uploads/6246df7063e28.jpg) center top no-repeat;"></div>
+<div class="bread_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="bread_nav">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true">
+                    </span>
+                    <NavLink href="/">Home</NavLink>
+                    &gt;
+                    <NavLink href="About"> About us </NavLink>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        @Body
+
+        <div id="left_column">
+            <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="left_column">
+                    <h3><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> CATEGORIES
+                    </h3>
+                    <ul class="left_nav_ul" id="firstpane">
+                        <li>
+                            <NavLink class="biglink" href="About">About us</NavLink>
+                        </li>
+                        <li>
+                            <a class="biglink" href="Quality-Warranty.html">Quality Warranty</a>
+                        </li>
+                        <ul class="left_snav_ul">
+                            <li><a href="Quality-Policy.html">Quality Policy</a></li>
+                            <li><a href="RoHS-Compliance.html">RoHS Compliance</a></li>
+                            <li><a href="Quality-Assurance.html">Quality & Compliance</a></li>
+                        </ul>
+                        <ul class="left_snav_ul">
+                        </ul>
+                        <li>
+                            <a class="biglink" href="Contact.html">Contact us</a>
+                        </li>
+                        <ul class="left_snav_ul">
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="left_contact">
+                    <h3>CONTACT US</h3>
+                    <p style="padding-top:20px;">Contact: Selena</p>
+                    <p>Phone: 86-0000000000</p>
+                    <p>E-mail: <a>sales@igbt.com</a></p>
+                    <p>Add: B509, Zerun Center, Banxuegang Avenue 4088, Longgang District, Shenzhen, China</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

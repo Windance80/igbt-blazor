@@ -1,86 +1,82 @@
 ﻿@inherits LayoutComponentBase
+@inject IJSRuntime JSInterop
 
 <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <a href="index.html"><img src="Uploads/5ee841ef5935f.png" class="logo" alt="IGBT Distributor" /></a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 top_email">
-                    <p class="glyphicon glyphicon-envelope" aria-hidden="true"></p>
-                    <p class="email_text">
-                    <p class="email_text_custom">CUSTOMER SUPPORT & SALE</p>
-                    <p class="email_text_link"><a
-                            href="cdn-cgi/l/email-protection.html#6b380a070e182b0e222c293f45080406"><span
-                                class="__cf_email__"
-                                data-cfemail="bfecded3daccffdaf6f8fdeb91dcd0d2">sales@igbt.com</span></a></p>
-                    </p>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <form id="searchform" method="get" action="https://www.eigbt.com/search/index.html">
-                        <div class="input-group search_group">
-                            <input type="text" name="name" class="form-control input-sm" placeholder="Products search">
-                            <span class="input-group-btn">
-                                <span id="search_submit" onclick="searchform.submit();" title="Products search"
-                                    class="glyphicon glyphicon-search btn-lg" aria-hidden="true"></span>
-                            </span>
-                        </div>
-                    </form>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <a href="index.html"><img src="Uploads/5ee841ef5935f.png" class="logo" alt="IGBT Distributor" /></a>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3">
+
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 top_email">
+                <p class="glyphicon glyphicon-envelope" aria-hidden="true"></p>
+                <p class="email_text">
+                <p class="email_text_custom">CUSTOMER SUPPORT & SALE</p>
+                <p class="email_text_link">
+                    <a>sales@igbt.com</a>
+                    <!-- <a href="cdn-cgi/l/email-protection.html#6b380a070e182b0e222c293f45080406"><span
+                                    class="__cf_email__"
+                                    data-cfemail="bfecded3daccffdaf6f8fdeb91dcd0d2">[email&#160;protected]</span></a> -->
+                </p>
+                </p>
             </div>
         </div>
+    </div>
 
-        <nav id="top_nav" class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <span id="search_btn" class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    <a class="navbar-brand" href="#">CATEGORIES</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="About.html">About us</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="IGBT-Modules-Manufacturers.html">Manufacturers</a>
-                            <a href="IGBT-Modules-Manufacturers.html" id="app_menudown" class="dropdown-toggle"
-                                data-toggle="dropdown" role="button" aria-expanded="false">
-                                <span class="glyphicon glyphicon-menu-down btn-xs"></span>
-                            </a>
-                            <ul class="dropdown-menu nav_small" role="menu">
-                                <li>
-                                    <a href="ABB.html">ABB</a>
-                                </li>
-                                <li>
-                                    <a href="AEG.html">AEG</a>
-                                </li>
-                                <li>
-                                    <a href="ARTESYN.html">ARTESYN</a>
-                                </li>
-                                <li>
-                                    <a href="DYNEX.html">DYNEX</a>
-                                </li>
-                                <li>
+    <nav id="top_nav" class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <span id="search_btn" class="glyphicon glyphicon-search" aria-hidden="true"></span> -->
+                <a class="navbar-brand" href="#">CATEGORIES</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><NavLink href="/" Match="NavLinkMatch.All">Home</NavLink></li>
+                    <li>
+                        @* <a href="About">About us</a> *@
+                        <NavLink href="About">About us</NavLink>
+                    </li>
+                    <li class="dropdown">
+                        <a href="IGBT-Modules-Manufacturers.html">Manufacturers</a>
+                        <a href="IGBT-Modules-Manufacturers.html" id="app_menudown" class="dropdown-toggle"
+                            data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="glyphicon glyphicon-menu-down btn-xs"></span>
+                        </a>
+                        <ul class="dropdown-menu nav_small" role="menu">
+                            <li>
+                                <a href="ABB.html">ABB</a>
+                            </li>
+                            <li>
+                                <a href="AEG.html">AEG</a>
+                            </li>
+                            <li>
+                                <a href="ARTESYN.html">ARTESYN</a>
+                            </li>
+                            <li>
+                                <a href="DYNEX.html">DYNEX</a>
+                            </li>
+                            <!-- <li>
                                     <a href="BUSSMANN.html">Bussmann</a>
                                 </li>
                                 <li>
                                     <a href="EUPEC.html">EUPEC</a>
-                                </li>
-                                <li>
-                                    <a href="FUJI.html">Fuji</a>
-                                </li>
-                                <li>
-                                    <a href="HITACHI.html">HITACHI</a>
-                                </li>
-                                <li>
+                                </li> -->
+                            <li>
+                                <a href="FUJI.html">Fuji</a>
+                            </li>
+                            <li>
+                                <a href="HITACHI.html">HITACHI</a>
+                            </li>
+                            <!-- <li>
                                     <a href="INFINEON.html">INFINEON</a>
                                 </li>
                                 <li>
@@ -94,14 +90,14 @@
                                 </li>
                                 <li>
                                     <a href="LUCENT.html">LUCENT</a>
-                                </li>
-                                <li>
-                                    <a href="MITSUBISHI.html">MITSUBISHI</a>
-                                </li>
-                                <li>
-                                    <a href="MOTOROLA.html">MOTOROLA</a>
-                                </li>
-                                <li>
+                                </li> -->
+                            <li>
+                                <a href="MITSUBISHI.html">MITSUBISHI</a>
+                            </li>
+                            <li>
+                                <a href="MOTOROLA.html">MOTOROLA</a>
+                            </li>
+                            <!-- <li>
                                     <a href="NIEC.html">NIEC</a>
                                 </li>
                                 <li>
@@ -109,28 +105,28 @@
                                 </li>
                                 <li>
                                     <a href="SANREX.html">SANREX</a>
-                                </li>
-                                <li>
+                                </li> -->
+                            <!-- <li>
                                     <a href="SEMIKRON.html">SEMIKRON</a>
-                                </li>
-                                <li>
-                                    <a href="SIEMENS.html">SIEMENS</a>
-                                </li>
-                                <li>
-                                    <a href="TOSHIBA.html">TOSHIBA</a>
-                                </li>
-                                <li>
-                                    <a href="VICOR.html">VICOR</a>
-                                </li>
-                                <li>
-                                    <a href="WESTCODE.html">WESTCODE</a>
-                                </li>
-                                <li>
-                                    <a href="All-MODULES.html">All MODULES</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
+                                </li> -->
+                            <li>
+                                <a href="SIEMENS.html">SIEMENS</a>
+                            </li>
+                            <li>
+                                <a href="TOSHIBA.html">TOSHIBA</a>
+                            </li>
+                            <li>
+                                <a href="VICOR.html">VICOR</a>
+                            </li>
+                            <li>
+                                <a href="WESTCODE.html">WESTCODE</a>
+                            </li>
+                            <li>
+                                <a href="All-MODULES.html">All MODULES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li class="dropdown">
                             <a href="new.html">News</a>
                             <a href="new.html" id="app_menudown" class="dropdown-toggle" data-toggle="dropdown"
                                 role="button" aria-expanded="false">
@@ -144,8 +140,8 @@
                                     <a href="11.html">Industry news</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="dropdown">
+                        </li> -->
+                    <!-- <li class="dropdown">
                             <a href="Quality-Warranty.html">Quality Warranty</a>
                             <a href="Quality-Warranty.html" id="app_menudown" class="dropdown-toggle"
                                 data-toggle="dropdown" role="button" aria-expanded="false">
@@ -162,54 +158,152 @@
                                     <a href="Quality-Assurance.html">Quality & Compliance</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="Applications.html">Applications</a>
-                            <a href="Applications.html" id="app_menudown" class="dropdown-toggle" data-toggle="dropdown"
-                                role="button" aria-expanded="false">
-                                <span class="glyphicon glyphicon-menu-down btn-xs"></span>
-                            </a>
-                            <ul class="dropdown-menu nav_small" role="menu">
-                                <li>
-                                    <a href="list-5-53.html">Home Application</a>
-                                </li>
-                                <li>
-                                    <a href="list-9-34.html">Industrial application </a>
-                                </li>
-                                <li>
-                                    <a href="DC-Fast-Charging-Solutions.html">DC Fast Charging Solutions</a>
-                                </li>
-                                <li>
-                                    <a href="list-4-3.html">Railway Traction / Power Transmission</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="Feedback/index.html">RFQ/Quote</a>
-                        </li>
-                        <li>
-                            <a href="Contact.html">Contact us</a>
-                        </li>
-                    </ul>
+                        </li> -->
+                    <li class="dropdown">
+                        <a href="Applications.html">Applications</a>
+                        <a href="Applications.html" id="app_menudown" class="dropdown-toggle" data-toggle="dropdown"
+                            role="button" aria-expanded="false">
+                            <span class="glyphicon glyphicon-menu-down btn-xs"></span>
+                        </a>
+                        <ul class="dropdown-menu nav_small" role="menu">
+                            <li>
+                                <a href="list-5-53.html">Home Application</a>
+                            </li>
+                            <li>
+                                <a href="list-9-34.html">Industrial application </a>
+                            </li>
+                            <li>
+                                <a href="DC-Fast-Charging-Solutions.html">DC Fast Charging Solutions</a>
+                            </li>
+                            <li>
+                                <a href="list-4-3.html">Railway Traction / Power Transmission</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li>
+                                <a href="Feedback/index.html">RFQ/Quote</a>
+                            </li> -->
+                    <li>
+                        <a href="Contact.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+@Body
+
+<nav class="navbar navbar-default navbar-fixed-bottom mfoot_box">
+    <!-- <div class="mfoot_nav btn-group dropup">
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                <span class="glyphicon glyphicon-share btn-lg" aria-hidden="true"></span>Share
+            </a>
+            <div class="dropdown-menu mfoot_share">
+
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_dd" href="https://www.addtoany.com/share_save"></a>
+                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_twitter"></a>
+                    <a class="a2a_button_google_plus"></a>
+                    <a class="a2a_button_linkedin"></a>
+                </div>
+
+                <script type="text/javascript" src="../static.addtoany.com/menu/page.js"></script>
+            </div>
+
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1TSCCENW3"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+
+                gtag('config', 'G-S1TSCCENW3');
+            </script>
+        </div> -->
+    <!-- <div class="mfoot_nav">
+            <a href="tel:86-13410359515">
+                <span class="glyphicon glyphicon-phone btn-lg" aria-hidden="true"></span>Call
+            </a>
+        </div> -->
+    <div class="mfoot_nav">
+        <button id="foot_btn" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar" style="width:100%; border: 0px; background: transparent;">
+            <span class="glyphicon glyphicon-th-list btn-lg"></span>
+            Menu
+        </button>
+    </div>
+    <div class="mfoot_nav">
+        <a id="gototop" href="#">
+            <span class="glyphicon glyphicon-circle-arrow-up btn-lg" aria-hidden="true"></span>Top
+        </a>
+    </div>
+</nav>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-5 footer_contact">
+                <img class="footer_logo" src="Uploads/5ec5062ba8d7b.png" alt="LOGO">
+                <p>Call Us: 86 000-0000000</p>
+                <p>Email Us: sales@igbt.com</p>
+                <p>Address: B509, Zerun Center, Banxuegang Avenue 4088, Longgang District, Shenzhen, China</p>
+                <!-- <p>ICP:08118166&nbsp;&nbsp;<a href="sitemap.html" class="footer_sitemap"
+                            target="_blank">Sitemap</a>&nbsp;
+                        <script data-cfasync="false"
+                            src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                        <script
+                            type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279020057'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1279020057' type='text/javascript'%3E%3C/script%3E"));</script>
+                        <script src="../code.tidio.co_443/ep1h0rgqdkubdyf0fvf7n6zuk64tlgdr.js" async></script>
+                    </p> -->
+                <!-- <div class="footer_icon">
+                        <a href="#" target="_blank">
+                            <img src="Uploads/5c1a1358a5241.jpg" class="opacity_img" alt="Facebook">
+                        </a><a href="https://twitter.com/IgbtE" target="_blank">
+                            <img src="Uploads/5c1a1361a15c3.jpg" class="opacity_img" alt="Twitter">
+                        </a><a href="#" target="_blank">
+                            <img src="Uploads/5c1a136d931f6.jpg" class="opacity_img" alt="BYD">
+                        </a><a href="#" target="_blank">
+                            <img src="Uploads/5c1a13880278d.jpg" class="opacity_img" alt="google">
+                        </a>
+                    </div> -->
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-7">
+                <div class="col-xs-12 col-md-4 footer_menu">
+                    <p class="footer_menu_first"><a href="#">Products</a></p>
+                    <!-- <p><a target="_blank" href="IGBT-Modules-Manufacturers.html">New Products</a></p> -->
+                    <p><a href="ABB.html">ABB</a></p>
+                    <p><a href="DYNEX.html"> Dynex</a></p>
+                    <!-- <p><a href="INFINEON.html">Infineon</a></p> -->
+                    <p><a href="WESTCODE.html">Westcode</a></p>
+                </div>
+                <div class="col-xs-12 col-md-4 footer_menu">
+                    <p class="footer_menu_first"><a href="#">Our Services</a></p>
+                    <p><NavLink href="About">About Us</NavLink></p>
+                    <!-- <p><a target="_blank" href="Excess-stock.html">Excess stock</a></p> -->
+                </div>
+                <div class="col-xs-12 col-md-4 footer_menu">
+                    <p class="footer_menu_first"><a href="#">Quality Warranty</a></p>
+                    <p><a href="Quality-Warranty.html">Quality Warranty</a></p>
+                    <p><a href="Quality-Policy.html">Quality Policy</a></p>
+                    <p><a href="RoHS-Compliance.html">RoHS Compliance</a></p>
                 </div>
             </div>
-        </nav>
-    </header>
-
-
-
-@* <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
         </div>
+    </div>
+</footer>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div> *@
+@code {
+
+    @* protected override async Task OnInitializedAsync() 
+    {
+        await JSInterop.InvokeVoidAsync("myFunction");
+    } *@
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSInterop.InvokeVoidAsync("myFunction");            
+        }
+    }
+}
