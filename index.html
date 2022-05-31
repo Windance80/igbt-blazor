@@ -8,26 +8,37 @@
     <base href="/igbt-blazor/" />
     <!-- <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" /> -->
     <link href="css/app.css" rel="stylesheet" />
-    <link href="igbt-blazor.styles.css" rel="stylesheet" /> 
-    
+    <!-- <link href="igbt-blazor.styles.css" rel="stylesheet" /> -->
+
     <link href="Public/css/bootstrap.css" rel="stylesheet">
     <link href="Home/Tpl/default/Public/css/bxslider.css" rel="stylesheet">
     <link href="Home/Tpl/default/Public/css/style.css" rel="stylesheet">
-    <script src="Public/js/jquery.min.js"></script>
-    <script src="Home/Tpl/default/Public/js/bxslider.min.js"></script>
-    <script src="Home/Tpl/default/Public/js/common.js"></script>
-    <script src="Public/js/bootstrap.js"></script>
 </head>
 
 <body>
     <div id="app">Loading...</div>
 
-    <div id="blazor-error-ui">
+    <!-- <div id="blazor-error-ui">
         An unhandled error has occurred.
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
-    </div>
+    </div> -->
+
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src="Public/js/jquery.min.js"></script>
+    <script src="Home/Tpl/default/Public/js/bxslider.min.js"></script>
+    <script src="Home/Tpl/default/Public/js/common.js"></script>
+    <script src="Public/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        function mySlider() {
+            $('.bxslider').bxSlider({
+                adaptiveHeight: true,
+                infiniteLoop: true,
+                hideControlOnEnd: true,
+                auto: true
+            })
+        };
+    </script>
 </body>
 
 </html>
